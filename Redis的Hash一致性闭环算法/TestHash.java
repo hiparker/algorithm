@@ -329,20 +329,16 @@ public class TestHash {
      */
     public static Integer closedLoopAlgorithm(Integer num,List<Integer> keys){
         Integer key = 0;
-        if(keys.size() == 1){
-            key = keys.get(0);
-        }else{
-            if(num > keys.get(keys.size()-1) || num < keys.get(0)){
-                key = keys.get(0);
-            }else {
-                for (int i = keys.size() - 2; i >= 0; i--) {
-                    if(num > keys.get(i)){
-                        key = keys.get(i+1);
-                        break;
-                    }
-                }
-            }
-        }
+        if(num > keys.get(keys.size()-1) || num <= keys.get(0)){
+			key = keys.get(0);
+		}else {
+			for (int i = keys.size() - 2; i >= 0; i--) {
+				if(num > keys.get(i)){
+					key = keys.get(i+1);
+					break;
+				}
+			}
+		}
         return key;
     }
 
