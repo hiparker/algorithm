@@ -330,7 +330,7 @@ public class TestHash {
     public static Integer closedLoopAlgorithm(Integer num,List<Integer> keys){
         Integer key = 0;
         if(num > keys.get(keys.size()-1) || num <= keys.get(0)){
-			key = keys.get(0);
+		key = keys.get(0);
 	}else {
 		for (int i = keys.size() - 2; i >= 0; i--) {
 			if(num > keys.get(i)){
