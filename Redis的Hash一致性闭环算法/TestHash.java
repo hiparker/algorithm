@@ -1,6 +1,3 @@
-
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.*;
 import java.util.regex.Pattern;
 
@@ -474,7 +471,7 @@ public class TestHash {
                                 if(matches){
                                     num = Integer.parseInt(str);
                                     String s = redisMap.get(num);
-                                    if(!StringUtils.isEmpty(s)){
+                                    if(s != null && !"".equals(s)){
                                         System.out.println("------------------------------");
                                         System.out.println();
                                         System.out.println("[ "+str+" ] 数据范围已存在");
@@ -804,7 +801,7 @@ public class TestHash {
      */
     public static void errorScanner(String str) {
         String strT = "";
-        if(!StringUtils.isEmpty(str)){
+        if(str != null && !"".equals(str)){
             strT = "[ "+str+" ] ";
         }
 
