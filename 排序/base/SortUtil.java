@@ -81,7 +81,7 @@ public abstract class SortUtil {
             System.arraycopy(array, 0, array2, 0, array.length);
 
             // 自行排序
-            sort(array2);
+            array2 = sort(array2);
 
             // 校验是否相等
             for (int j = 0; j < array1.length; j++) {
